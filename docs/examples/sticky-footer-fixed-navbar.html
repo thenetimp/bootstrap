@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link href="/css/bootstrap.css" rel="stylesheet">
+        <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="/css/hackerspace.css" rel="stylesheet">
+        <style type="text/css">
+            /*
+            The css for this sticky footer does not need an extra div like the push method.
+            */
+        
+            html,body {
+                margin:0;
+                padding:0;
+                height:100%; }
+
+            .wrapper {
+                min-height:100%;
+                position:relative; }
+
+            /*
+                The content requires the padding of the bottom to be the same height as 
+                the height of the footer. The footer height must be a fixed length.
+                The padding on the top is used to push the content below the area of fixed
+                nav bar, this can be adjusted to whatever you want but 60 seems to be a good
+                starting point.
+            */
+            .content {
+                padding:60px 0 60px 0; }
+
+            .footer {
+                position:absolute;
+                height: 60;
+                bottom:0;
+                background: #ccc;
+                width:100%; }
+
+            /*
+                Need to add side padding to your content and navbar-inner class.  You must also
+                change the bottom padding on your content if the height of the footer
+                changes height when the browser is resized in responsive design.
+            */
+            @media (max-width: 480px) {
+                .navbar-inner { margin: 0 20px}
+                .content {
+                    padding:0px 20px 60px 20px;
+                }
+                .footer {
+                    padding:0px 20px;
+                }
+            }
+
+            @media (min-width: 481px) and (max-width: 767px) {
+                .navbar-inner { margin: 0 20px}
+                .content {
+                    padding:0px 20px 60px 20px;
+                }
+                .footer {
+                    padding:0px 20px;
+                }
+            }
+            @media (min-width: 768px) and (max-width: 979px) {
+                .content {
+                    padding:0px 0 60px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </a>
+                            <a class="brand" href="#">Project name</a>
+                            <div class="nav-collapse collapse">
+                                <ul class="nav">
+                                    <li class="active"><a href="#">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat est, at mollis dui pharetra nec. Aenean elementum rhoncus nunc, id suscipit leo malesuada vel. Donec fermentum diam id purus tristique dapibus. In vitae mi vitae velit feugiat tristique sit amet quis sapien. Nulla blandit condimentum ipsum, sed fringilla augue pellentesque ac. Donec quis risus metus, vel aliquet felis. Praesent placerat dictum tellus eu consectetur. Phasellus mauris elit, porta sed dignissim at, varius et elit. Mauris tellus arcu, ultricies consequat fermentum eget, adipiscing non nunc. Suspendisse libero dolor, dignissim eget condimentum vitae, congue et enim. Ut feugiat, massa nec laoreet feugiat, ante erat varius nulla, vel sollicitudin neque neque vitae tellus. Donec convallis nisi sagittis quam hendrerit eu pulvinar arcu tempus. Curabitur at mauris at eros blandit elementum quis vel lacus. Mauris quam lorem, ornare nec tempus varius, aliquet ut lorem. Fusce risus sem, interdum sit amet faucibus eget, faucibus a elit.</p>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <p>This is the sticky footer I found this method on <a href="http://www.cssstickyfooter.com/using-sticky-footer-code.html">cssstickyfooter.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</html>
